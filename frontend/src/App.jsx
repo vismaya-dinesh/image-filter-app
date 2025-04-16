@@ -15,7 +15,7 @@ function App() {
     formData.append('filter', filter)
 
     try {
-      const response = await axios.post('https://image-filter-app-xm24.onrender.com/filter', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/filter`, formData, {
         responseType: 'blob',
       })
 
